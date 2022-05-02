@@ -266,7 +266,9 @@ class CircularCountDownTimerState extends State<CircularCountDownTimer>
                         ? Container(
                             height: 23,
                             width: 23,
-                            decoration: BoxDecoration(shape: BoxShape.circle), color: Color(0xFFFDCD03),
+                            decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: Color(0xFFFDCD03)),
                             child: Align(
                               alignment: FractionalOffset.center,
                               child: Text(
