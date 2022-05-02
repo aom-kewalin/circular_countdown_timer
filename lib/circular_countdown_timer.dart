@@ -263,21 +263,22 @@ class CircularCountDownTimerState extends State<CircularCountDownTimer>
                       ),
                     ),
                     widget.isTimerTextShown
-                        ? CircleAvatar(
-                          radius: 22,
-                          backgroundColor: Color(0xFFFDCD03),
-                          child: Align(
+                        ? Container(
+                            height: 23,
+                            width: 23,
+                            decoration: BoxDecoration(shape: BoxShape.circle), color: Color(0xFFFDCD03),
+                            child: Align(
                               alignment: FractionalOffset.center,
                               child: Text(
-                                    time + 's',
-                                    style: widget.textStyle ??
-                                        TextStyle(
-                                          fontSize: 16.0,
-                                          color: Colors.black,
-                                        ),
-                                  ),
+                                time + 's',
+                                style: widget.textStyle ??
+                                    TextStyle(
+                                      fontSize: 16.0,
+                                      color: Colors.black,
+                                    ),
+                              ),
                             ),
-                        )
+                          )
                         : Container(),
                   ],
                 ),
