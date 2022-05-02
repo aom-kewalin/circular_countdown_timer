@@ -263,25 +263,26 @@ class CircularCountDownTimerState extends State<CircularCountDownTimer>
                       ),
                     ),
                     widget.isTimerTextShown
-                        ? Container(
-                            height: 23,
-                            width: 23,
-                            alignment: FractionalOffset.center,
-                            decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                color: Color(0xFFFDCD03)),
-                            child: Align(
-                              alignment: FractionalOffset.center,
-                              child: Text(
-                                time + 's',
-                                style: widget.textStyle ??
-                                    TextStyle(
-                                      fontSize: 16.0,
-                                      color: Colors.black,
-                                    ),
+                        ? Center(
+                          child: Container(
+                              height: 23,
+                              width: 23,
+                              decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: Color(0xFFFDCD03)),
+                              child: Align(
+                                alignment: FractionalOffset.center,
+                                child: Text(
+                                  time + 's',
+                                  style: widget.textStyle ??
+                                      TextStyle(
+                                        fontSize: 16.0,
+                                        color: Colors.black,
+                                      ),
+                                ),
                               ),
                             ),
-                          )
+                        )
                         : Container(),
                   ],
                 ),
