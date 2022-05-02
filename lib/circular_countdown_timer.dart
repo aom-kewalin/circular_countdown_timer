@@ -263,17 +263,20 @@ class CircularCountDownTimerState extends State<CircularCountDownTimer>
                       ),
                     ),
                     widget.isTimerTextShown
-                        ? Align(
-                            alignment: FractionalOffset.center,
-                            child: Text(
-                                  time + 's',
-                                  style: widget.textStyle ??
-                                      TextStyle(
-                                        fontSize: 16.0,
-                                        color: Colors.black,
-                                      ),
-                                ),
-                          )
+                        ? CircleAvatar(
+                          radius: widget.width,
+                          child: Align(
+                              alignment: FractionalOffset.center,
+                              child: Text(
+                                    time + 's',
+                                    style: widget.textStyle ??
+                                        TextStyle(
+                                          fontSize: 16.0,
+                                          color: Colors.black,
+                                        ),
+                                  ),
+                            ),
+                        )
                         : Container(),
                   ],
                 ),
