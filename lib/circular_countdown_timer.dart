@@ -264,7 +264,8 @@ class CircularCountDownTimerState extends State<CircularCountDownTimer>
                     ),
                     widget.isTimerTextShown
                         ? CircleAvatar(
-                          radius: widget.width,
+                          radius: 22,
+                          backgroundColor: Color(0xFFFDCD03),
                           child: Align(
                               alignment: FractionalOffset.center,
                               child: Text(
