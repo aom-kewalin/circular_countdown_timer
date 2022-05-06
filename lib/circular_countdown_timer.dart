@@ -70,6 +70,13 @@ class CircularCountDownTimer extends StatefulWidget {
 
   /// Handles the timer start.
   final bool autoStart;
+  
+
+  final double widthTime;
+
+  final double heightTime;
+
+  final Color? backgroundColorTime;
 
   CircularCountDownTimer(
       {required this.width,
@@ -77,6 +84,9 @@ class CircularCountDownTimer extends StatefulWidget {
       required this.duration,
       required this.fillColor,
       required this.ringColor,
+      required this.widthTime,
+      required this.heightTime,
+      this.backgroundColorTime,
       this.backgroundColor,
       this.fillGradient,
       this.ringGradient,
@@ -265,11 +275,11 @@ class CircularCountDownTimerState extends State<CircularCountDownTimer>
                     widget.isTimerTextShown
                         ? Center(
                           child: Container(
-                              height: 23,
-                              width: 23,
+                              height: widget.heightTime,
+                              width: widget.width,
                               decoration: BoxDecoration(
                                   shape: BoxShape.circle,
-                                  color: Color(0xFFFDCD03)),
+                                  color: widget.backgroundColorTime),
                               child: Align(
                                 alignment: FractionalOffset.center,
                                 child: Text(

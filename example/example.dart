@@ -43,6 +43,9 @@ class _MyHomePageState extends State<MyHomePage> {
         // Countdown duration in Seconds.
         duration: _duration,
 
+        widthTime: MediaQuery.of(context).size.width / 2,
+        heightTime: MediaQuery.of(context).size.height / 2,
+
         // Countdown initial elapsed Duration in Seconds.
         initialDuration: 0,
 
